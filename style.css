@@ -1,0 +1,126 @@
+:root{
+    --bgcolor: rgb(46, 46, 46);
+    --messagebox-color: rgb(35, 35, 35);
+    --content-font: RichEatinAllCaps;
+    --heading-font: OnTheWallBook;
+}
+
+body{
+    margin: 0;
+    background-color: var(--bgcolor);
+    padding-top: 0;
+    height: 100%;
+   
+}
+/*styling the heading box */
+header{
+    
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    position: relative;
+}
+
+/*styling the heading */
+h1{
+    width: auto;
+    height: auto;
+    position: absolute;
+
+    top: 50%;
+    margin-top: -25px;
+
+    color: white;
+    font-size: 58px;
+    font-family: var(--heading-font);
+    letter-spacing: 0px;
+
+}
+/* span{
+    text-shadow: 2px 2px 1px red;
+} */
+
+/*styles and positions the message and its container box*/
+#message-box-container{
+    width: 100%;
+    height: 80px;
+    background-color: var(--messagebox-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#message-box{
+    position: absolute;
+    width: 100%;
+
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    font-family: var(--content-font);
+}
+
+/*to position the container of gameboard*/
+#game-board-container{
+    display: flex;
+    justify-content: center;
+
+    padding-top: 30px;
+}
+/*styles and positions the grid that acts as the gameboard
+of tic-tac-toe */
+#game-board{
+    background-color: black;
+    width: 360px;
+    height: 360px;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    font-family: var(--content-font);
+    color: white;
+
+}
+/*styles the individual squares of the gameboard*/
+.squares{
+    border: 1px solid white;
+    
+    font-size: 58px;
+    text-align: center;
+    
+    padding-top: 28px;
+    
+    
+}
+
+/*controls what color shadow whould be given, according to sign*/
+.X{
+    text-shadow: 3px 2px 3px red;
+}
+.O{
+    text-shadow: 3px 2px 1px blue;
+}
+
+/*styling and positioning the restart button*/
+#button-container{
+    display: flex;
+    justify-content: center;
+
+    padding-top: 20px;
+}
+#reset-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+
+    
+}
+#reset-button > i{
+    font-size: 25px;
+}
